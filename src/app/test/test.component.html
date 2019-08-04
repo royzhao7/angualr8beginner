@@ -1,0 +1,29 @@
+<h2>
+  welcome {{name}}
+</h2>
+  <h2 [style.color]="hasError?'red':'orange'" >style binding</h2>
+  <button (click)="onClick($event)" >hi</button>
+  <button (click)="zhaoshuai='赵帅'" >hi</button>
+
+  <input #myinput type="text" />
+  <button (click)="logmessage(myinput.value)">log</button>
+  {{zhaoshuai}}
+  <input type="text" [(ngModel)]="name"  id="">
+  {{name}}
+ <h2 *ngIf="displayName;then thenBlock;else elseBlock"></h2>
+ <ng-template #thenBlock><h2>bbbbbb</h2></ng-template>
+ <ng-template #elseBlock><h2>aaaaa</h2></ng-template>
+<span [ngSwitch]="color">
+<p *ngSwitchCase="'red'">
+you red
+</p>
+<p *ngSwitchCase="'green'">
+you green
+</p>
+<p *ngSwitchDefault>
+you black
+</p>
+
+<div *ngFor="let color of colors">{{color}}</div>
+</span>
+ 

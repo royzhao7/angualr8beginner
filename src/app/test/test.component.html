@@ -26,5 +26,9 @@ you black
 
 <div *ngFor="let color of colors">{{color}}</div>
 
-<h1>{{huhu[0].name}}</h1>
+<ul *ngFor="let h of huhu">
+<li>{{h.name}}</li>
+</ul>
+{{errorMessage}}
+
  <button (click)="fireEvent()" >hahah</button>
